@@ -1,0 +1,202 @@
+:datasett: FKB-Lufthavn
+:versjon: 5.1
+:underversjon: 2027-01-01
+:publisert: 2026-12-XX
+:reginstr-type: Fotogrammetrisk
+include::../felles/adoc_parametere.adoc[]
+include::../felles/dokument_metadata.adoc[]
+
+== Innledning, historikk og endringslogg
+
+=== Innledning
+Dette dokumentet er en registreringsinstruks for fotogrammetrisk ajourhold av FKB-Lufthavn. 
+
+For lufthavner der Avinor er dataeier benyttes normalt en mer detaljert produduktspesifikasjon for datafangst. 
+Fotogrammetrisk FKB-Lufthavn omfatter et begrenset utvalg av objekttyper skal registreres i prosjekter hvor Avinor ikke er deltaker. 
+
+For full beskrivelse av FKB-Lufthavn og detaljer rundt modellering og UML-modeller henvises det til Produktspesifikasjon FKB-Lufthavn 5.1: {prodspek-url}
+
+
+=== Endringslogg
+
+Se produktspesifikasjon for FKB-Lufthavn 5.1 for en oversikt over endringer siden FKB-Lufthavn 5.0. 
+
+I forbindelse med innføring av FKB-Lufthavn 5.1 er det gjort en rekke justeringer i spesifikasjonen for å få bedre samsvar med Avinors spesifikasjoner for Lufthavn. 
+Objekttypene som registreres i FKB-Lufthavn skal registreres på samme måte som de tilsvarende objektene hos Avinor. 
+
+* For objekttype Rullebane er egler og skisser for grunnrissreferanse justert
+* Objekttype Taksebanegrense utgår og i stedet registreres objekttype Taksebane med heleid flategeometri. 
+
+
+
+<<<
+
+== Generelle retningslinjer for fotogrammetrisk kartlegging av FKB
+
+Se http://sosi.geonorge.no/Standarder/FKB_generell_del/#_generelle_retningslinjer_for_fotogrammetrisk_registrering_av_fkb_normativt[Vedlegg D i FKB Generell del]
+
+<<<
+
+== Objekttyper og egenskaper
+
+Det er kun klassifisering av objekttype og registering av geometri med metadata (kvalitet og dato) som gjøres ved fotogrammetrisk kartlegging dersom ikke annet er avtalt. 
+
+For heleid flategeometri (Rullebane og Taksebane) må krav til stedfestingsnøyaktighet oppfattes som om det gjelder avgrensningen av flateobjektet. Kodingen med posisjonskvalitet på objektene skal gjenspeile det som er registrert. 
+Det innebærer at posisjonskvaliteten til flata ikke kan settes bedre enn den minst nøyaktige delen av avgrensningen til flata.
+
+include::ea_eksport.adoc[]
+
+<<<
+
+== Datakvalitet
+
+For detaljer om kvalitetsmodellen som er benyttet her henvises det til {fkbGenerellDel-url}#truekvalitet[FKB Generell del, kapittel 8]
+
+Kvalitetskravene gjelder alle nye data som blir etablert i et FKB kartleggingsprosjekt (jf. <<Registrering av nye kartobjekter>> i kapittel 2). 
+
+
+=== Kvalitetskrav
+
+[[tab-Logisk-konsistens]]
+.Krav til logisk konsistens
+[cols="5*", options="header"]
+|===
+|Kvalitetselement
+|Kvalitetsmål
+|Referanse
+|Krav
+|Kommentar
+
+|Konseptuell konsistens
+|Antall enheter der regler i konseptuelt skjema ikke er oppfylt
+|NS-EN ISO19157:2013/010/1 
+|0 feil
+|F.eks. overskytende egenskaper eller ulovlige egenskaper. 
+
+|Topologisk konsistens
+|Antall ulovlige egenoverlappinger
+|NS-EN ISO19157:2013/027/1
+|0 feil
+|Egenoverlapper ("spiker") skal ikke forekomme i FKB-Lufthavn
+
+|Topologisk konsistens
+|Antall ulovlige egenkryssinger
+|NS-EN ISO19157:2013/026/1
+|0 feil
+|Egenkryssinger skal ikke forekomme i FKB-Lufthavn
+|===
+
+Krav til logisk konsistens kontrolleres maskinelt vha. SOSI-kontroll, kontroll mot GML-skjema e.l.
+
+[[tab-Egenskapskonsistens]]
+.Krav til egenskapskonsistens
+[cols="4*", options="header"]
+|===
+|Kvalitetselement
+|Kvalitetsmål
+|Referanse
+|Krav
+
+|Klassifikasjonsriktighet
+|Prosentandel feil klassifiserte egenskaper
+|Geodatakvalitet:2014/508/1
+|Maksimalt 0.5% feilklassifisering
+|===
+
+
+[[tab-Fullstendighet]]
+.Krav til fullstendighet
+[cols="5*", options="header"]
+|===
+|Kvalitetselement
+|Kvalitetsmål
+|Kvalitetsklasse Fullstendighet
+|Referanse
+|Krav
+
+|Manglende objekter
+|Prosentandel manglende objekter
+|1
+|Geodatakvalitet:2014/102/1
+|Maksimalt 0,5% manglende objekter
+
+|Manglende objekter
+|Prosentandel manglende objekter
+|2
+|Geodatakvalitet:2014/102/1
+|Maksimalt 2% manglende objekter
+
+|Overskytende objekter
+|Prosentandel overskytende objekter
+|1
+|Geodatakvalitet:2014/101/1
+|Maksimalt 0,5% overskytende objekter
+
+|Overskytende objekter
+|Prosentandel overskytende objekter
+|2
+|Geodatakvalitet:2014/101/1
+|Maksimalt 2% overskytende objekter
+|===
+
+Krav til fullstendighet og egenskapskonsistens kontrolleres mot flybilder (ortofoto) som ble brukt under kartkonstruksjon.
+
+include::../../felles/tabell_noyaktighetsklasser.adoc[]
+
+Krav til stedfestingsnøyaktighet kontrolleres mot uavhengige innmålinger med bedre kvalitet som f.eks. laserdata eller landmåling. Hvilke objekttyper som inngår i hvilke kvalitetsklasser er angitt under.
+
+*Grove feil*
+
+Grove feil regnes som avvik større enn 3 ganger krav til standardavviket angitt i tabellen over. Kravet er at maksimalt 1 % av registrerte objekter skal ha avvik som kategoriseres som grove feil. 
+
+
+=== Kvalitetsklasser
+Ved angivelse av krav til stedfestingsnøyaktighet og fullstendighet er objekttypene inndelt i forskjellige klasser.
+Nedenfor følger en oversikt over hvilken klasse objekttypene i FKB-Lufthavn tilhører. 
+
+[[tab-Kvalitetsklasser]]
+.Kvalitetsklasser for objekttypene i FKB-Lufthavn
+[cols="4*", options="header"]
+|===
+
+|Objekttype
+|Kvalitetklasse Grunnriss
+|Kvalitetsklasse Høyde
+|Kvalitetsklasse Fullstendighet
+
+|Lufthavnlys
+|2
+|2
+|1
+
+|Rullebane
+|2
+|2
+|1
+
+|Taksebane
+|2
+|2
+|1
+
+|Helikopterlandingsplass
+|2
+|2
+|1
+
+|===
+
+[appendix]
+== Forklaring til registreringsinstrukser for fotogrammetrisk registrering
+
+include::../felles/forklaring.adoc[]
+
+:sectnums!:
+
+<<<
+
+[discrete]
+== Lisensvilkår
+
+// Inkl. lisensvilkår
+include::../../felles/lisensvilkaar.adoc[]
