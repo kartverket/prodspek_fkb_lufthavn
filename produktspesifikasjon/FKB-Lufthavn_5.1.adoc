@@ -1,9 +1,9 @@
 :datasett: FKB-Lufthavn
 :versjon: 5.1
-:publisert: 2026-10-01
+:publisert: 2026-10-06
 :metadata-url: https://kartkatalog.geonorge.no/metadata/fkb-lufthavn/23dfcc33-fb04-4898-aa88-68b49c4bfea7
 :versjon-forrige: 5.0.2
-:skjema-versjon: 5.1
+:skjemaversjon: 5.1
 :versjon-erstattet-av: 5.1
 :underversjon: 2027-01-01
 :underversjon-forrige: 2022-01-01
@@ -53,6 +53,7 @@ Det gjøres i tillegg en rekke justeringer/presiseringer i fotogrammetrisk regis
 * Justert definisjon og illustrerende bilde for Rullebane
 * Fjernet objekttype Taksebanegrense og innført objekttype Taksebane med flategeometri i stedet
 * Innført ny objekttype for Oppstillingsplass
+* Oppdatert kap.6 som referanserammer med henvisning til FKB Generell del.
 
 ==== Endringer fra FKB-Lufthavn 5.0.1 til FKB-Lufthavn 5.0.2
 
@@ -147,8 +148,9 @@ include::modellRapport.adoc[]
 
 == Referansesystem
 
-// Fellesdel
-include::../felles_prodspek/kap6_referansesystem.adoc[]
+Romlige referansesystem for håndteres likt for alle FKB-datasett. 
+Se https://sosi.geonorge.no/Standarder/FKB_generell_del/#_romlige_referansesystem[Vedlegg B i FKB Generell del] for nærmere beskrivelse. 
+Data ihht. denne standarden skal håndteres i tråd med disse beskrivelsene.
 
 == Kvalitet
 
@@ -201,7 +203,7 @@ include::../felles_prodspek/kap13_metadata.adoc[]
 
 GML-realiseringen følger kravene i "Realisering i GML-format 5.0" <<SOSI-GML>>. Realiseringen defineres av følgende filer:
 
-* link:{skjema-url}/FKBLufthavn.xsd[GML-skjema]
+* link:{skjema-url}/FKBLufthavn.xsd[{skjema-url}/FKBLufthavn.xsd]
 * link:{skjema-url}/FKBLufthavn.sch[Schematron-regler til validering av tilleggskrav til datainnhold og -struktur utover det som er definert i GML-skjemafil] (sch-fil)
 * link:{skjema-url}/eksempel/[Katalog med eksempelfiler]
 
