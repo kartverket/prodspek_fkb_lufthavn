@@ -1,6 +1,6 @@
 :datasett: FKB-Lufthavn
 :versjon: 5.1
-:publisert: 2026-10-06
+:publisert: 2026-10-12
 :metadata-url: https://kartkatalog.geonorge.no/metadata/fkb-lufthavn/23dfcc33-fb04-4898-aa88-68b49c4bfea7
 :versjon-forrige: 5.0.2
 :skjemaversjon: 5.1
