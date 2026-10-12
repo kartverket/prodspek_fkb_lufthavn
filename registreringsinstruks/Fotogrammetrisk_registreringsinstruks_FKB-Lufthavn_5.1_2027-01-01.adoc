@@ -3,8 +3,19 @@
 :underversjon: 2027-01-01
 :publisert: 2026-12-XX
 :reginstr-type: Fotogrammetrisk
-include::../felles/adoc_parametere.adoc[]
-include::../felles/dokument_metadata.adoc[]
+// Forrige versjon av dokumentet
+:versjon-erstatter: 5.0
+:underversjon-erstatter: 2024-01-01
+// Ny(siste) versjon av dokumentet. Verdiene skal være like versjon/underversjon unntatt for "erstattet-av" dokumenter 
+:versjon-ny: 5.1
+:underversjon-ny: 2027-01-01
+// Dokumentstatus styrer skriving av dokument metadata i filhode.adoc. 1 - Gyldig, 2 - Høring, 3 - Erstattet
+:dokumentstatus: 2
+:geonorgeKodelister-url: https://register.geonorge.no/sosi-kodelister/fkb/lufthavn/5.0
+
+
+// Inkludere adoc-parametere og dokument metadata fra filhode.adoc
+include::../felles_reginst/filhode.adoc[]
 
 == Innledning, historikk og endringslogg
 
@@ -24,8 +35,10 @@ Se produktspesifikasjon for FKB-Lufthavn 5.1 for en oversikt over endringer side
 I forbindelse med innføring av FKB-Lufthavn 5.1 er det gjort en rekke justeringer i spesifikasjonen for å få bedre samsvar med Avinors spesifikasjoner for Lufthavn. 
 Objekttypene som registreres i FKB-Lufthavn skal registreres på samme måte som de tilsvarende objektene hos Avinor. 
 
-* For objekttype Rullebane er egler og skisser for grunnrissreferanse justert
+* For objekttype Rullebane er regler og skisser for grunnrissreferanse justert
 * Objekttype Taksebanegrense utgår og i stedet registreres objekttype Taksebane med heleid flategeometri. 
+* Objekttype Oppstillingsplass er innført.
+* Presiseringer om registrering av Lufthavnlys og Helikopterlandingsplass 
 
 
 
@@ -141,7 +154,7 @@ Krav til logisk konsistens kontrolleres maskinelt vha. SOSI-kontroll, kontroll m
 
 Krav til fullstendighet og egenskapskonsistens kontrolleres mot flybilder (ortofoto) som ble brukt under kartkonstruksjon.
 
-include::../../felles/tabell_noyaktighetsklasser.adoc[]
+include::../felles_prodspek/tabell_noyaktighetsklasser.adoc[]
 
 Krav til stedfestingsnøyaktighet kontrolleres mot uavhengige innmålinger med bedre kvalitet som f.eks. laserdata eller landmåling. Hvilke objekttyper som inngår i hvilke kvalitetsklasser er angitt under.
 
@@ -179,6 +192,11 @@ Nedenfor følger en oversikt over hvilken klasse objekttypene i FKB-Lufthavn til
 |2
 |1
 
+|Oppstillingsplass
+|2
+|2
+|1
+
 |Helikopterlandingsplass
 |2
 |2
@@ -189,7 +207,7 @@ Nedenfor følger en oversikt over hvilken klasse objekttypene i FKB-Lufthavn til
 [appendix]
 == Forklaring til registreringsinstrukser for fotogrammetrisk registrering
 
-include::../felles/forklaring.adoc[]
+include::../felles_reginst/forklaring.adoc[]
 
 :sectnums!:
 
@@ -199,4 +217,4 @@ include::../felles/forklaring.adoc[]
 == Lisensvilkår
 
 // Inkl. lisensvilkår
-include::../../felles/lisensvilkaar.adoc[]
+include::../felles_prodspek/lisensvilkaar.adoc[]

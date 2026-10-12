@@ -2,35 +2,512 @@
 <<<
 '''
  
-[[helikopterlandingsplass]]
-=== Objekttype: Helikopterlandingsplass
-*Definisjon fra FKB produktspesifikasjon*: 
+[[rullebane]]
+=== Objekttype: Rullebane
+*Definisjon fra FKB produktspesifikasjon*: omr&#229;de definert som en lufthavns rullebane 
  
  
-.Illustrasjon fra produktspesifikasjon av Helikopterlandingsplass
-image::https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.0/figurer/objtype_helikopterlandingsplass.png[link=https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.0/figurer/objtype_helikopterlandingsplass.png, Alt="Illustrasjon fra produktspesifikasjon: Helikopterlandingsplass"]
+.Illustrasjon fra produktspesifikasjon av Rullebane
+image::https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_rullebane.png[link=https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_rullebane.png, Alt="Illustrasjon fra produktspesifikasjon: Rullebane"]
  
  
 [discrete]
 ==== Tilleggsinformasjon for fotogrammetrisk registrering
-Landingsplassen er merket med kryss og eventuelt "H". 
-Sirkelen rundt landingsplassen skal registreres. 
+Skal registreres som lukket areal (heleid flategeometri).
 
-Landingsplassene finnes ofte i forbindelse med sykehus, legevakter eller andre typer bygninger i forbindelse med beredskap og redning.
+Rullebaneflaten er rektangul&#230;r, og f&#248;lger ytterkant av hvit oppmerking langs rullebanen og ytterkant av gul oppmerking i rullebaneendene. 
 
-Landingsplassen kan ligge p&#229; bakken, p&#229; bygning (medium B) eller i luft (medium L).
+Rullebane vil vanligvis v&#230;re knyttet til en eller flere Taksebaner. I overgangen mellom Rullebane og Taksebane skal det benyttes lik avgrensning (ikke overlapp eller gap mellom flatene)
+ 
+ 
+'''
+.Rullebaner registreres som rektangler. Snulommer (vendehammer) som vist på denne skissa inngår ikke i Rullebane og registreres i stedet som egne Taksebane-flater.
+image::figurer/rullebane_avgrensning.png[link=figurer/rullebane_avgrensning.png, Alt="Rullebaner registreres som rektangler. Snulommer (vendehammer) som vist på denne skissa inngår ikke i Rullebane og registreres i stedet som egne Taksebane-flater."]
+ 
  
  
 [discrete]
 ==== Føringer
 [cols="h,2"]
 |===
+|FKB-A
+|Påkrevd registrering
+ 
+|FKB-B
+|Påkrevd registrering
+ 
+|FKB-C
+|Påkrevd registrering
+ 
+|FKB-D
+|Påkrevd registrering
+ 
 |FKB grunnrissreferanse
-|Oppmerket sirkel
+|Ytterkant oppmerking
  
 |FKB høydereferanse
-|Dekke landingsplass
+|Terreng/dekke
  
+|===
+ 
+ 
+<<<
+ 
+[discrete]
+==== Egenskapstabell for objekttype: Rullebane
+[cols="20,20,20,10", options="header"]
+|===
+|*Navn:* 
+|*Type:* 
+|*SOSI_navn:* 
+|*Mult.:* 
+ 
+|identifikasjon
+|«dataType» Identifikasjon
+|..IDENT
+|[0..1]
+ 
+|identifikasjon.lokalId
+|CharacterString
+|...LOKALID
+|[1..1]
+ 
+|identifikasjon.navnerom
+|CharacterString
+|...NAVNEROM
+|[1..1]
+ 
+|identifikasjon.versjonId
+|CharacterString
+|...VERSJONID
+|[0..1]
+ 
+|oppdateringsdato
+|DateTime
+|..OPPDATERINGSDATO
+|[0..1]
+ 
+|sluttdato
+|DateTime
+|..SLUTTDATO
+|[0..1]
+ 
+|datafangstdato
+|Date
+|..DATAFANGSTDATO
+|[1..1]
+ 
+|verifiseringsdato
+|Date
+|..VERIFISERINGSDATO
+|[0..1]
+ 
+|registreringsversjon
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/registreringsversjon[Registreringsversjon, window = _blank]
+|..REGISTRERINGSVERSJON
+|[0..1]
+ 
+|informasjon
+|CharacterString
+|..INFORMASJON
+|[0..1]
+ 
+|kvalitet
+|«dataType» Posisjonskvalitet
+|..KVALITET
+|[1..1]
+ 
+|kvalitet.datafangstmetode
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
+|...DATAFANGSTMETODE
+|[1..1]
+ 
+|kvalitet.nøyaktighet
+|Integer
+|...NØYAKTIGHET
+|[0..1]
+ 
+|kvalitet.synbarhet
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/synbarhet[Synbarhet, window = _blank]
+|...SYNBARHET
+|[0..1]
+ 
+|kvalitet.datafangstmetodeHøyde
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
+|...DATAFANGSTMETODEHØYDE
+|[0..1]
+ 
+|kvalitet.nøyaktighetHøyde
+|Integer
+|...H-NØYAKTIGHET
+|[0..1]
+ 
+|område
+|GM_Surface
+|.FLATE
+|[1..1]
+ 
+|eksternpeker
+|URI
+|..EKSTERNPEKER
+|[0..1]
+ 
+|===
+ 
+<<<
+'''
+ 
+[[taksebane]]
+=== Objekttype: Taksebane
+*Definisjon fra FKB produktspesifikasjon*: bane eller rute p&#229; en flyplass opprettet til bruk for taksende luftfart&#248;yer i den hensikt &#229; virke som en forbindelse mellom ulike deler av flyplassen
+ 
+ 
+.Illustrasjon fra produktspesifikasjon av Taksebane
+image::https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_taksebane.png[link=https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_taksebane.png, Alt="Illustrasjon fra produktspesifikasjon: Taksebane"]
+ 
+ 
+[discrete]
+==== Tilleggsinformasjon for fotogrammetrisk registrering
+Skal registreres som lukket areal (heleid flategeometri).
+
+Taksebaner skal normalt v&#230;re knyttet til en Rullebane og/eller en Oppstillingsplattform. I overgangen mellom Taksebane og Rullebane/Oppstillingsplattform skal det benyttes lik avgrensning (ikke overlapp eller gap mellom flatene)
+
+Registreres ytterkant taksebaneoppmerking. Der det ikke er oppmerking registreres asfaltkant. 
+
+Taksebane kan ogs&#229; ligge mellom rullebaner eller langs rullebane. Det kan ogs&#229; v&#230;re taksebane i omr&#229;det utenfor rullebanen ved snuplass i enden av rullebanen (vendehammeren).
+
+
+
+ 
+ 
+'''
+.Viser registrering av taksebane (rødt) og oppstillingsplattform (blått). Områdene er skilt av oppmerking.
+image::figurer/taksebane_oppstillingsplattform.png[link=figurer/taksebane_oppstillingsplattform.png, Alt="Viser registrering av taksebane (rødt) og oppstillingsplattform (blått). Områdene er skilt av oppmerking."]
+ 
+ 
+'''
+.Viser registrering av taksebane-flater i forbindelse med snuplass/vendehammer i enden av rullebane
+image::figurer/taksebane_vendehammer.png[link=figurer/taksebane_vendehammer.png, Alt="Viser registrering av taksebane-flater i forbindelse med snuplass/vendehammer i enden av rullebane"]
+ 
+ 
+ 
+[discrete]
+==== Føringer
+[cols="h,2"]
+|===
+|FKB-A
+|Påkrevd registrering
+ 
+|FKB-B
+|Påkrevd registrering
+ 
+|FKB-C
+|Påkrevd registrering
+ 
+|FKB-D
+|Påkrevd registrering
+ 
+|FKB grunnrissreferanse
+|Oppmerking, dekkekant
+ 
+|FKB høydereferanse
+|Terreng/dekke
+ 
+|===
+ 
+ 
+<<<
+ 
+[discrete]
+==== Egenskapstabell for objekttype: Taksebane
+[cols="20,20,20,10", options="header"]
+|===
+|*Navn:* 
+|*Type:* 
+|*SOSI_navn:* 
+|*Mult.:* 
+ 
+|identifikasjon
+|«dataType» Identifikasjon
+|..IDENT
+|[0..1]
+ 
+|identifikasjon.lokalId
+|CharacterString
+|...LOKALID
+|[1..1]
+ 
+|identifikasjon.navnerom
+|CharacterString
+|...NAVNEROM
+|[1..1]
+ 
+|identifikasjon.versjonId
+|CharacterString
+|...VERSJONID
+|[0..1]
+ 
+|oppdateringsdato
+|DateTime
+|..OPPDATERINGSDATO
+|[0..1]
+ 
+|sluttdato
+|DateTime
+|..SLUTTDATO
+|[0..1]
+ 
+|datafangstdato
+|Date
+|..DATAFANGSTDATO
+|[1..1]
+ 
+|verifiseringsdato
+|Date
+|..VERIFISERINGSDATO
+|[0..1]
+ 
+|registreringsversjon
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/registreringsversjon[Registreringsversjon, window = _blank]
+|..REGISTRERINGSVERSJON
+|[0..1]
+ 
+|informasjon
+|CharacterString
+|..INFORMASJON
+|[0..1]
+ 
+|kvalitet
+|«dataType» Posisjonskvalitet
+|..KVALITET
+|[1..1]
+ 
+|kvalitet.datafangstmetode
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
+|...DATAFANGSTMETODE
+|[1..1]
+ 
+|kvalitet.nøyaktighet
+|Integer
+|...NØYAKTIGHET
+|[0..1]
+ 
+|kvalitet.synbarhet
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/synbarhet[Synbarhet, window = _blank]
+|...SYNBARHET
+|[0..1]
+ 
+|kvalitet.datafangstmetodeHøyde
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
+|...DATAFANGSTMETODEHØYDE
+|[0..1]
+ 
+|kvalitet.nøyaktighetHøyde
+|Integer
+|...H-NØYAKTIGHET
+|[0..1]
+ 
+|område
+|GM_Surface
+|.FLATE
+|[1..1]
+ 
+|eksternpeker
+|URI
+|..EKSTERNPEKER
+|[0..1]
+ 
+|===
+ 
+<<<
+'''
+ 
+[[oppstillingsplattform]]
+=== Objekttype: Oppstillingsplattform
+*Definisjon fra FKB produktspesifikasjon*: omr&#229;de for oppstilling av luftfart&#248;y p&#229; en lufthavn. Oppstillingsplattform inkluderer oppstillingsplasser, avisingsomr&#229;der, drivstoffp&#229;fyllingsomr&#229;der og vedlikeholdsomr&#229;der.
+ 
+ 
+.Illustrasjon fra produktspesifikasjon av Oppstillingsplattform
+image::https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_oppstillingsplattform.png[link=https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_oppstillingsplattform.png, Alt="Illustrasjon fra produktspesifikasjon: Oppstillingsplattform"]
+ 
+ 
+[discrete]
+==== Tilleggsinformasjon for fotogrammetrisk registrering
+Skal registreres som lukket areal (heleid flategeometri).
+
+Oppstillingsplattform vil vanligvis v&#230;re knyttet til en eller flere Taksebaner. I overgangen mellom Oppstillingsplattform og Taksebane skal det benyttes lik avgrensning (ikke overlapp eller gap mellom flatene)
+
+Oppstillingsplattformen starter ofte ved &#171;Grense for man&#248;vreringsomr&#229;de&#187; eller &#171;Venteposisjon&#187; og f&#248;res fram til oppstillingsplattformkant, bygninger eller sikkerhetslinje. Der det ikke er kantoppmerking kan det registreres langs ytterkant av fast dekke dersom det er en naturlig kant p&#229; oppstillingsplattformen.
+
+ 
+ 
+'''
+.Oppstillingsplattform tydelig avgrenset av oppmerking
+image::figurer/oppstillingsplattform.png[link=figurer/oppstillingsplattform.png, Alt="Oppstillingsplattform tydelig avgrenset av oppmerking"]
+ 
+ 
+ 
+[discrete]
+==== Føringer
+[cols="h,2"]
+|===
+|FKB-A
+|Påkrevd registrering
+ 
+|FKB-B
+|Påkrevd registrering
+ 
+|FKB-C
+|Påkrevd registrering
+ 
+|FKB-D
+|Påkrevd registrering
+ 
+|FKB grunnrissreferanse
+|Langside: Ytterkant oppmerking kantstripe,Kortside: Gjennom Terskelpunktet (LufthavnFastmerke) evt. midten oppmerking terskelbar
+ 
+|FKB høydereferanse
+|Terreng/dekke
+ 
+|===
+ 
+ 
+<<<
+ 
+[discrete]
+==== Egenskapstabell for objekttype: Oppstillingsplattform
+[cols="20,20,20,10", options="header"]
+|===
+|*Navn:* 
+|*Type:* 
+|*SOSI_navn:* 
+|*Mult.:* 
+ 
+|identifikasjon
+|«dataType» Identifikasjon
+|..IDENT
+|[0..1]
+ 
+|identifikasjon.lokalId
+|CharacterString
+|...LOKALID
+|[1..1]
+ 
+|identifikasjon.navnerom
+|CharacterString
+|...NAVNEROM
+|[1..1]
+ 
+|identifikasjon.versjonId
+|CharacterString
+|...VERSJONID
+|[0..1]
+ 
+|oppdateringsdato
+|DateTime
+|..OPPDATERINGSDATO
+|[0..1]
+ 
+|sluttdato
+|DateTime
+|..SLUTTDATO
+|[0..1]
+ 
+|datafangstdato
+|Date
+|..DATAFANGSTDATO
+|[1..1]
+ 
+|verifiseringsdato
+|Date
+|..VERIFISERINGSDATO
+|[0..1]
+ 
+|registreringsversjon
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/registreringsversjon[Registreringsversjon, window = _blank]
+|..REGISTRERINGSVERSJON
+|[0..1]
+ 
+|informasjon
+|CharacterString
+|..INFORMASJON
+|[0..1]
+ 
+|kvalitet
+|«dataType» Posisjonskvalitet
+|..KVALITET
+|[1..1]
+ 
+|kvalitet.datafangstmetode
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
+|...DATAFANGSTMETODE
+|[1..1]
+ 
+|kvalitet.nøyaktighet
+|Integer
+|...NØYAKTIGHET
+|[0..1]
+ 
+|kvalitet.synbarhet
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/synbarhet[Synbarhet, window = _blank]
+|...SYNBARHET
+|[0..1]
+ 
+|kvalitet.datafangstmetodeHøyde
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
+|...DATAFANGSTMETODEHØYDE
+|[0..1]
+ 
+|kvalitet.nøyaktighetHøyde
+|Integer
+|...H-NØYAKTIGHET
+|[0..1]
+ 
+|område
+|GM_Surface
+|.FLATE
+|[1..1]
+ 
+|eksternpeker
+|URI
+|..EKSTERNPEKER
+|[0..1]
+ 
+|===
+ 
+<<<
+'''
+ 
+[[helikopterlandingsplass]]
+=== Objekttype: Helikopterlandingsplass
+*Definisjon fra FKB produktspesifikasjon*: definert omr&#229;de for landing og letting med helikopter.
+ 
+ 
+.Illustrasjon fra produktspesifikasjon av Helikopterlandingsplass
+image::https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_helikopterlandingsplass.png[link=https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_helikopterlandingsplass.png, Alt="Illustrasjon fra produktspesifikasjon: Helikopterlandingsplass"]
+ 
+ 
+[discrete]
+==== Tilleggsinformasjon for fotogrammetrisk registrering
+Landingsplassen er merket med kryss og eventuelt "H". Omr&#229;det som skal registreres avgrenses av oppmerkingen (vanligvis sirkel) rundt landingsplassen.
+
+Dersom det ikke finnes noen tydelig oppmerking rundt landingsplassen registreres en sirkel rundt kryss eller "H" og lavere n&#248;yaktighet angis i kvalitetskodingen. 
+
+Landingsplassene finnes inne p&#229; Lufthavner og i forbindelse med sykehus, legevakter eller andre typer bygninger i forbindelse med beredskap og redning.
+
+Landingsplassen kan ligge p&#229; bakken, p&#229; bygning (medium B) eller i luft (medium L).
+ 
+ 
+'''
+.Viser ekspempel på at oppmerking av landingsplass (område som skal registreres) ikke nødvendigvis trenger å være formet som en sirkel
+image::figurer/helikopterlandingsplass_firkant.png[link=figurer/helikopterlandingsplass_firkant.png, Alt="Viser ekspempel på at oppmerking av landingsplass (område som skal registreres) ikke nødvendigvis trenger å være formet som en sirkel"]
+ 
+ 
+ 
+[discrete]
+==== Føringer
+[cols="h,2"]
+|===
 |FKB-A
 |Påkrevd registrering
  
@@ -42,6 +519,12 @@ Landingsplassen kan ligge p&#229; bakken, p&#229; bygning (medium B) eller i luf
  
 |FKB-D
 |Opsjonell registrering
+ 
+|FKB grunnrissreferanse
+|Oppmerking
+ 
+|FKB høydereferanse
+|Dekke landingsplass
  
 |===
  
@@ -158,32 +641,20 @@ Landingsplassen kan ligge p&#229; bakken, p&#229; bygning (medium B) eller i luf
  
  
 .Illustrasjon fra produktspesifikasjon av Lufthavnlys
-image::https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.0/figurer/objtype_lufthavnlys.png[link=https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.0/figurer/objtype_lufthavnlys.png, Alt="Illustrasjon fra produktspesifikasjon: Lufthavnlys"]
+image::https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_lufthavnlys.png[link=https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_lufthavnlys.png, Alt="Illustrasjon fra produktspesifikasjon: Lufthavnlys"]
  
  
 [discrete]
 ==== Tilleggsinformasjon for fotogrammetrisk registrering
-Alle lufthavnlys klassifiseres som Annen lufthavnbelysning (..LHLYSTYPE 99) ved registrering etter denne instruksen.
+Alle lufthavnlys klassifiseres som Annen lufthavnbelysning (..LHLYSTYPE 99) dersom det ikke blir levert manus for klassifisering i de forskjellige lufthavnlystypene. 
 
 I kartleggingsprosjekter der Avinor (lufthavneier) ikke deltar som oppdragsgiver skal det, hvis annet ikke avtales, kun registreres lufthavnlys utenfor lufthavnen.
- 
- 
-'''
-.Eksempel på Lufthavnlys. Røde punkter markerer hvert lufthavnlys utenfor lufthavnen.
-image::figurer/lufthavnlys.png[link=figurer/lufthavnlys.png, Alt="Eksempel på Lufthavnlys. Røde punkter markerer hvert lufthavnlys utenfor lufthavnen."]
- 
  
  
 [discrete]
 ==== Føringer
 [cols="h,2"]
 |===
-|FKB grunnrissreferanse
-|Senter
- 
-|FKB høydereferanse
-|Topp
- 
 |FKB-A
 |Påkrevd registrering
  
@@ -195,6 +666,12 @@ image::figurer/lufthavnlys.png[link=figurer/lufthavnlys.png, Alt="Eksempel på L
  
 |FKB-D
 |Registreres ikke
+ 
+|FKB grunnrissreferanse
+|Senter
+ 
+|FKB høydereferanse
+|Topp
  
 |===
  
@@ -301,326 +778,75 @@ image::figurer/lufthavnlys.png[link=figurer/lufthavnlys.png, Alt="Eksempel på L
 |[0..1]
  
 |lufthavnlystype
-|«CodeList» Lufthavnlystype
+| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/lufthavn/5.0/lufthavnlystype[Lufthavnlystype, window = _blank]
 |..LHLYSTYPE
 |[1..1]
  
 |===
- 
-<<<
-'''
- 
-[[rullebane]]
-=== Objekttype: Rullebane
-*Definisjon fra FKB produktspesifikasjon*: avgrenset, rektangulært område på en flyplass på land innrettet for landing og avgang med luftfartøyer
- 
- 
-.Illustrasjon fra produktspesifikasjon av Rullebane
-image::https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.0/figurer/objtype_rullebane.png[link=https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.0/figurer/objtype_rullebane.png, Alt="Illustrasjon fra produktspesifikasjon: Rullebane"]
+[discrete]
+==== Presiseringer til beskrivelsen av kodelistekoder
  
  
 [discrete]
-==== Tilleggsinformasjon for fotogrammetrisk registrering
-Skal registreres som lukket areal, og slik sett overstyrer dette objektet andre objekter som for eksempel Taksebanegrense
+===== Lufthavnlystype - Kodenavn: Annen lufthavnbelysning
+*Definisjon:* Alle lufthavnlys registreres med denne koden dersom det ikke er levert manus for klassifisering
  
- 
-'''
-.Rullebane. Lukket polygon skal registreres (grønt) rundt hele rullebanen med avgrensning mot ytterkant oppmerking (gult) på langsiden og gjennom terskel på kortsidene.
-image::figurer/rullebane.png[link=figurer/rullebane.png, Alt="Rullebane. Lukket polygon skal registreres (grønt) rundt hele rullebanen med avgrensning mot ytterkant oppmerking (gult) på langsiden og gjennom terskel på kortsidene."]
- 
- 
-'''
-.Eksempel på registrering av rullebane (rød strek).
-image::figurer/rullebane2.png[link=figurer/rullebane2.png, Alt="Eksempel på registrering av rullebane (rød strek)."]
+.Annen eller uklassifisert belysning i forbindelse med lufthavn.
+image::figurer/lys_registrering.png[link=figurer/lys_registrering.png, Alt="Annen eller uklassifisert belysning i forbindelse med lufthavn."]
  
  
  
 [discrete]
-==== Føringer
-[cols="h,2"]
-|===
-|FKB grunnrissreferanse
-|Langside: Ytterkant oppmerking kantstripe, Kortside: Gjennom Terskelpunktet (LufthavnFastmerke) evt. midten oppmerking terskelbar
+===== Lufthavnlystype - Kodenavn: Hinderlys
+*Definisjon:* Lys p&#229; p&#229; objekter som kan v&#230;re til hinder for luftfart&#248;yer p&#229; bakken, landing/letting eller i lufta. Hinderlysene kan ligge p&#229; terrenget eller v&#230;re montert i stolper, master, bygninger eller andre konstruksjoner.  
  
-|FKB høydereferanse
-|Terreng/dekke
- 
-|FKB-A
-|Påkrevd registrering
- 
-|FKB-B
-|Påkrevd registrering
- 
-|FKB-C
-|Påkrevd registrering
- 
-|FKB-D
-|Påkrevd registrering
- 
-|===
- 
- 
-<<<
- 
-[discrete]
-==== Egenskapstabell for objekttype: Rullebane
-[cols="20,20,20,10", options="header"]
-|===
-|*Navn:* 
-|*Type:* 
-|*SOSI_navn:* 
-|*Mult.:* 
- 
-|identifikasjon
-|«dataType» Identifikasjon
-|..IDENT
-|[0..1]
- 
-|identifikasjon.lokalId
-|CharacterString
-|...LOKALID
-|[1..1]
- 
-|identifikasjon.navnerom
-|CharacterString
-|...NAVNEROM
-|[1..1]
- 
-|identifikasjon.versjonId
-|CharacterString
-|...VERSJONID
-|[0..1]
- 
-|oppdateringsdato
-|DateTime
-|..OPPDATERINGSDATO
-|[0..1]
- 
-|sluttdato
-|DateTime
-|..SLUTTDATO
-|[0..1]
- 
-|datafangstdato
-|Date
-|..DATAFANGSTDATO
-|[1..1]
- 
-|verifiseringsdato
-|Date
-|..VERIFISERINGSDATO
-|[0..1]
- 
-|registreringsversjon
-| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/registreringsversjon[Registreringsversjon, window = _blank]
-|..REGISTRERINGSVERSJON
-|[0..1]
- 
-|informasjon
-|CharacterString
-|..INFORMASJON
-|[0..1]
- 
-|kvalitet
-|«dataType» Posisjonskvalitet
-|..KVALITET
-|[1..1]
- 
-|kvalitet.datafangstmetode
-| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
-|...DATAFANGSTMETODE
-|[1..1]
- 
-|kvalitet.nøyaktighet
-|Integer
-|...NØYAKTIGHET
-|[0..1]
- 
-|kvalitet.synbarhet
-| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/synbarhet[Synbarhet, window = _blank]
-|...SYNBARHET
-|[0..1]
- 
-|kvalitet.datafangstmetodeHøyde
-| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
-|...DATAFANGSTMETODEHØYDE
-|[0..1]
- 
-|kvalitet.nøyaktighetHøyde
-|Integer
-|...H-NØYAKTIGHET
-|[0..1]
- 
-|område
-|GM_Surface
-|.FLATE
-|[1..1]
- 
-|posisjon
-|Punkt
-|.PUNKT
-|[0..1]
- 
-|eksternpeker
-|URI
-|..EKSTERNPEKER
-|[0..1]
- 
-|===
- 
-<<<
-'''
- 
-[[taksebanegrense]]
-=== Objekttype: Taksebanegrense
-*Definisjon fra FKB produktspesifikasjon*: avgrensning av bane eller rute på en flyplass opprettet til bruk for taksende luftfartøyer i den hensikt å virke som en forbindelse mellom ulike deler av flyplassen
- 
- 
-.Illustrasjon fra produktspesifikasjon av Taksebanegrense
-image::https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.0/figurer/objtype_taksebanegrense.png[link=https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.0/figurer/objtype_taksebanegrense.png, Alt="Illustrasjon fra produktspesifikasjon: Taksebanegrense"]
- 
- 
-[discrete]
-==== Tilleggsinformasjon for fotogrammetrisk registrering
-Registreres fortrinnsvis langs ytterkant oppmerking eller dersom oppmerking mangler langs dekkekant. Starter ved rullebanen og g&#229;r frem og konnekteres til annen vegsituasjonsobjekter (i FKB-Veg).
- 
- 
-'''
-.Eksempel på taksebanegrense er markert med blått i bildet. Taksebanegrense skal registreres etter markering alternativt dekkekant hvis markering mangler. Rullebane er markert i rødt i bildet. Annen vegsituasjon (gult i bildet) på lufthavnen som ikke beskrives av andre objekttyper skal registreres som AnnetVegarealAvgrensning. Se mer om dette i registreringsinstruksen for FKB-Veg.
-image::figurer/taksebanegrense.png[link=figurer/taksebanegrense.png, Alt="Eksempel på taksebanegrense er markert med blått i bildet. Taksebanegrense skal registreres etter markering alternativt dekkekant hvis markering mangler. Rullebane er markert i rødt i bildet. Annen vegsituasjon (gult i bildet) på lufthavnen som ikke beskrives av andre objekttyper skal registreres som AnnetVegarealAvgrensning. Se mer om dette i registreringsinstruksen for FKB-Veg."]
- 
- 
-'''
-.Eksempel på taksebanegrense er markert med blått i bildet. Taksebanegrense skal registreres etter markering alternativt dekkekant hvis markering mangler. Rullebane er markert i rødt i bildet. Annen vegsituasjon (gult i bildet) på lufthavnen som ikke beskrives av andre objekttyper skal registreres som AnnetVegarealAvgrensning. Se mer om dette i registreringsinstruksen for FKB-Veg.
-image::figurer/taksebanegrense2.png[link=figurer/taksebanegrense2.png, Alt="Eksempel på taksebanegrense er markert med blått i bildet. Taksebanegrense skal registreres etter markering alternativt dekkekant hvis markering mangler. Rullebane er markert i rødt i bildet. Annen vegsituasjon (gult i bildet) på lufthavnen som ikke beskrives av andre objekttyper skal registreres som AnnetVegarealAvgrensning. Se mer om dette i registreringsinstruksen for FKB-Veg."]
+.Eksempel på registrering av hinderlys i stolpe.
+image::figurer/hinderlys.png[link=figurer/hinderlys.png, Alt="Eksempel på registrering av hinderlys i stolpe."]
  
  
  
 [discrete]
-==== Føringer
-[cols="h,2"]
-|===
-|FKB grunnrissreferanse
-|Oppmerking, dekkekant
+===== Lufthavnlystype - Kodenavn: Innflygningsblinkfyr
+*Definisjon:* Innflygingsblinkfyr kan v&#230;re plassert p&#229; samme stolpe som innflygingslysene, eller st&#229; separat, men vil uansett st&#229; p&#229; linje i forlengelse av rullebanens senterlinje
  
-|FKB høydereferanse
-|Terreng/dekke
- 
-|FKB-A
-|Påkrevd registrering
- 
-|FKB-B
-|Påkrevd registrering
- 
-|FKB-C
-|Påkrevd registrering
- 
-|FKB-D
-|Påkrevd registrering
- 
-|===
+.Figur som viser typisk plassering av blinkfyr (lystype 16) og innflygningslys med høy (lystype 14) og lav (lystype 14) intensitet
+image::figurer/blinkfyr.png[link=figurer/blinkfyr.png, Alt="Figur som viser typisk plassering av blinkfyr (lystype 16) og innflygningslys med høy (lystype 14) og lav (lystype 14) intensitet"]
  
  
-<<<
  
 [discrete]
-==== Egenskapstabell for objekttype: Taksebanegrense
-[cols="20,20,20,10", options="header"]
-|===
-|*Navn:* 
-|*Type:* 
-|*SOSI_navn:* 
-|*Mult.:* 
+===== Lufthavnlystype - Kodenavn: Sirklingslys
+*Definisjon:* Lys som visuelt leder piloten i rett kurs under sirklingsprosedyrer, farge hvit blinklys eller fast gult lys.
  
-|identifikasjon
-|«dataType» Identifikasjon
-|..IDENT
-|[0..1]
+.Ekspempel på registrering av sirklingslys
+image::figurer/sirklingslys.png[link=figurer/sirklingslys.png, Alt="Ekspempel på registrering av sirklingslys"]
  
-|identifikasjon.lokalId
-|CharacterString
-|...LOKALID
-|[1..1]
  
-|identifikasjon.navnerom
-|CharacterString
-|...NAVNEROM
-|[1..1]
  
-|identifikasjon.versjonId
-|CharacterString
-|...VERSJONID
-|[0..1]
+[discrete]
+===== Lufthavnlystype - Kodenavn: Innflygningsledelys
+*Definisjon:* Gir en forsterket visuell referanse langs en spesiell innflygingsl&#248;ype, f.eks for &#229; unng&#229; hinder.
  
-|oppdateringsdato
-|DateTime
-|..OPPDATERINGSDATO
-|[0..1]
+.Eksempel på registrering av innflygningsledelys
+image::figurer/innflygningsledelys.png[link=figurer/innflygningsledelys.png, Alt="Eksempel på registrering av innflygningsledelys"]
  
-|sluttdato
-|DateTime
-|..SLUTTDATO
-|[0..1]
  
-|datafangstdato
-|Date
-|..DATAFANGSTDATO
-|[1..1]
  
-|verifiseringsdato
-|Date
-|..VERIFISERINGSDATO
-|[0..1]
+[discrete]
+===== Lufthavnlystype - Kodenavn: Innflygningslys, høy intensitet
+*Definisjon:* Innflygingslys er spesielt utformet for &#229; f&#248;re fly til landingssonen/terskel. Lysene st&#229;r p&#229; en rekke langs innflygingen, avbrutt av lyslinjer p&#229; tvers av innflygingen (tverrbarer). H&#248;yintense lys peker i innflyingsretningen.
  
-|registreringsversjon
-| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/registreringsversjon[Registreringsversjon, window = _blank]
-|..REGISTRERINGSVERSJON
-|[0..1]
+.Eksempel på registrering av innflygningslys på tverrbar
+image::figurer/innflygningslys.png[link=figurer/innflygningslys.png, Alt="Eksempel på registrering av innflygningslys på tverrbar"]
  
-|informasjon
-|CharacterString
-|..INFORMASJON
-|[0..1]
  
-|kvalitet
-|«dataType» Posisjonskvalitet
-|..KVALITET
-|[1..1]
  
-|kvalitet.datafangstmetode
-| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
-|...DATAFANGSTMETODE
-|[1..1]
+[discrete]
+===== Lufthavnlystype - Kodenavn: Innflygningslys, lav intensitet
+*Definisjon:* Innflygingslys er spesielt utformet for &#229; f&#248;re fly til landingssonen/terskel. Lysene st&#229;r p&#229; en rekke langs innflygingen, avbrutt av lyslinjer p&#229; tvers av innflygingen (tverrbarer). Lavintense lys sitter litt bak og opp for de h&#248;yintense.
  
-|kvalitet.nøyaktighet
-|Integer
-|...NØYAKTIGHET
-|[0..1]
+.Bilde som viser typisk plassering av lavintenst lys
+image::figurer/innflygningslysLav.png[link=figurer/innflygningslysLav.png, Alt="Bilde som viser typisk plassering av lavintenst lys"]
  
-|kvalitet.synbarhet
-| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/synbarhet[Synbarhet, window = _blank]
-|...SYNBARHET
-|[0..1]
  
-|kvalitet.datafangstmetodeHøyde
-| «CodeList»  https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode[Datafangstmetode, window = _blank]
-|...DATAFANGSTMETODEHØYDE
-|[0..1]
- 
-|kvalitet.nøyaktighetHøyde
-|Integer
-|...H-NØYAKTIGHET
-|[0..1]
- 
-|grense
-|GM_Curve
-|.KURVE
-|[1..1]
- 
-|eksternpeker
-|URI
-|..EKSTERNPEKER
-|[0..1]
- 
-|===
 // End of Registreringsinstruks UML-model
