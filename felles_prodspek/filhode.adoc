@@ -38,13 +38,15 @@ WARNING: *Høringsversjon!* Siste gyldige versjon finnes på {prodspek-url}/{ver
 
 endif::[]
 
-
 ifeval::[{dokumentstatus} == 3]
 
 WARNING: *Utgått versjon!* Dokumentet er erstattet av  {reginstr-url-erstatter} 
 
+*Publisert*: {publisert} 
+
 endif::[]
 
+ifeval::[{dokumentstatus} == 1]
 
 *Publisert*: {publisert} +
 *Denne versjonen finnes på*: {prodspek-url}/{versjon} +
@@ -56,6 +58,8 @@ endif::[]
 *Formelt godkjent av*: Kartverket +
 
 Vedtatt som standard av Standardiseringskomiteen for Geomatikk 
+
+endif::[]
 
 ****
 

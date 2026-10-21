@@ -453,9 +453,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_innhold_i_endringsloggen">1.3.1. Innhold i endringsloggen</a></li>
 <li><a href="#_endringer_fra_fkb_lufthavn_5_0_2_til_fkb_lufthavn_5_1">1.3.2. Endringer fra FKB-Lufthavn 5.0.2 til FKB-Lufthavn 5.1</a></li>
-<li><a href="#_endringer_fra_fkb_lufthavn_5_0_1_til_fkb_lufthavn_5_0_2">1.3.3. Endringer fra FKB-Lufthavn 5.0.1 til FKB-Lufthavn 5.0.2</a></li>
-<li><a href="#_endringer_fra_fkb_lufthavn_5_0_til_fkb_lufthavn_5_0_1">1.3.4. Endringer fra FKB-Lufthavn 5.0 til FKB-Lufthavn 5.0.1</a></li>
-<li><a href="#_endringer_fra_fkb_lufthavn_4_6_til_fkb_lufthavn_5_0">1.3.5. Endringer fra FKB-Lufthavn 4.6 til FKB-Lufthavn 5.0</a></li>
 </ul>
 </li>
 <li><a href="#_normative_referanser">1.4. Normative referanser</a></li>
@@ -515,12 +512,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_pakke_generelle_elementer">5.1.7. Pakke: Generelle elementer</a>
 <ul class="sectlevel4">
 <li><a href="#appfellesegenskaper">5.1.7.1. <em>«FeatureType» Fellesegenskaper (abstrakt)</em></a></li>
-<li><a href="#appkvalitetpåkrevd">5.1.7.2. <em>«FeatureType» KvalitetPåkrevd (abstrakt)</em></a></li>
-<li><a href="#appidentifikasjon">5.1.7.3. «dataType» Identifikasjon</a></li>
-<li><a href="#appposisjonskvalitet">5.1.7.4. «dataType» Posisjonskvalitet</a></li>
-<li><a href="#appsynbarhet">5.1.7.5. «CodeList» Synbarhet</a></li>
-<li><a href="#appdatafangstmetode">5.1.7.6. «CodeList» Datafangstmetode</a></li>
-<li><a href="#appregistreringsversjon">5.1.7.7. «CodeList» Registreringsversjon</a></li>
+<li><a href="#appidentifikasjon">5.1.7.2. «dataType» Identifikasjon</a></li>
+<li><a href="#appposisjonskvalitet">5.1.7.3. «dataType» Posisjonskvalitet</a></li>
+<li><a href="#appsynbarhet">5.1.7.4. «CodeList» Synbarhet</a></li>
+<li><a href="#appdatafangstmetode">5.1.7.5. «CodeList» Datafangstmetode</a></li>
+<li><a href="#appregistreringsversjon">5.1.7.6. «CodeList» Registreringsversjon</a></li>
 </ul>
 </li>
 </ul>
@@ -640,19 +636,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><strong>Publisert</strong>: 2026-10-12<br>
-<strong>Denne versjonen finnes på</strong>: <a href="https://sosi.geonorge.no/produktspesifikasjoner/FKB-Lufthavn/5.1" class="bare">https://sosi.geonorge.no/produktspesifikasjoner/FKB-Lufthavn/5.1</a><br>
-- <a href="https://sosi.geonorge.no/produktspesifikasjoner/FKB-Lufthavn/5.1">HTML-dokument</a><br>
-- <a href="https://sosi.geonorge.no/uml-modeller/sosi-del-3-produktspesifikasjoner/FKB-Lufthavn/5.1">HTML-visning av UML-modellen</a><br>
-<strong>Nyeste versjon finnes på</strong>: <a href="https://sosi.geonorge.no/produktspesifikasjoner/FKB-Lufthavn" class="bare">https://sosi.geonorge.no/produktspesifikasjoner/FKB-Lufthavn</a><br>
-<strong>Denne versjonen erstatter</strong>: <a href="https://sosi.geonorge.no/produktspesifikasjoner/FKB-Lufthavn/5.0.2">FKB-Lufthavn 5.0.2</a><br>
-<strong>Faglig godkjent av</strong>: Geovekst<br>
-<strong>Formelt godkjent av</strong>: Kartverket<br></p>
-</div>
-<div class="paragraph">
-<p>Vedtatt som standard av Standardiseringskomiteen for Geomatikk</p>
-</div>
 </div>
 </div>
 <!-- toc disabled -->
@@ -664,13 +647,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_innledning">1.1. Innledning</h3>
 <div class="paragraph">
-<p>FKB-Lufthavn omfatter et begrenset utvalg av objekttyper for lufthavner som skal registreres og forvaltes i FKB. Avinor har en mer detaljert spesifikasjon som benyttes for datafangst og forvaltning av data for Avinors egne lufthavner. Data etter denne spesifikasjonen skal kunne avledes fra Avinors data.</p>
+<p>FKB-Lufthavn omfatter et begrenset utvalg av objekttyper for lufthavner som skal registreres og forvaltes i FKB.
+Produktspesifikasjonen brukes for kartlegging av Forsvarets lufthavner samt flere private lufthavner.
+Avinor har en mer detaljert spesifikasjon som benyttes for datafangst og forvaltning av data for Avinors egne lufthavner.
+Data etter denne spesifikasjonen skal kunne avledes fra Avinors data.</p>
 </div>
 <div class="paragraph">
-<p>Denne produktspesifikasjonen er utarbeidet iht. SOSI produktspesifikasjoner – Krav og godkjenning 5.0 <a href="#SOSI-KRAV">[SOSI-KRAV]</a>. UML-modellen som ligger til grunn for innhold i diagrammene og dokumentasjon i kap. 5, følger reglene i SOSI Regler for UML-modellering, versjon 5.1 <a href="#SOSI-UML">[SOSI-UML]</a>. <a href="http://sosi.geonorge.no/veiledere/UML">Denne veilederen</a> gir hjelp til å lese UML-diagrammene.</p>
+<p>Denne produktspesifikasjonen er utarbeidet iht. SOSI produktspesifikasjoner – Krav og godkjenning 5.0 <a href="#SOSI-KRAV">[SOSI-KRAV]</a>.
+UML-modellen som ligger til grunn for innhold i diagrammene og dokumentasjon i kap. 5, følger reglene i SOSI Regler for UML-modellering, versjon 5.1 <a href="#SOSI-UML">[SOSI-UML]</a>.
+<a href="http://sosi.geonorge.no/veiledere/UML">Denne veilederen</a> gir hjelp til å lese UML-diagrammene.</p>
 </div>
 <div class="paragraph">
-<p>Mye av detaljinformasjonen om registrering av de ulike objekttypene i FKB er samlet i egne Fotogrammetriske registreringsinstrukser. Fotogrammetrisk registreringsinstruks for FKB-Lufthavn 5.0 finnes på <a href="https://sosi.geonorge.no/registreringsinstrukser/FKB-Lufthavn/5.1/Fotogrammetrisk_2027-01-01">https://sosi.geonorge.no/registreringsinstrukser/FKB-Lufthavn/5.1/Fotogrammetrisk_2027-01-01</a>.</p>
+<p>Mye av detaljinformasjonen om registrering av de ulike objekttypene i FKB er samlet i egne Fotogrammetriske registreringsinstrukser.</p>
 </div>
 </div>
 <div class="sect2">
@@ -707,6 +695,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>FKB-Lufthavn versjon 5.0.2 - 2022-01-01</p>
 </li>
+<li>
+<p>FKB-Lufthavn versjon 5.1 - 2027-01-01</p>
+</li>
 </ul>
 </div>
 </div>
@@ -715,18 +706,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_innhold_i_endringsloggen">1.3.1. Innhold i endringsloggen</h4>
 <div class="paragraph">
-<p>FKB 5.0 er en ny hovedversjon av FKB. Dette innebærer at det er gjort større endringer i standarden. Det vil ikke være tilstrekkelig å lese endringsloggen for å få et helhetlig bilde av FKB 5.0 produktspesifikasjonene. For å få et komplett bilde av produktspesifikasjonen må man lese dokumentasjonen som en helhet, inkludert de gjennomgående endringene som er beskrevet i FKB Generell del 5.0 <a href="#FKB">[FKB]</a>.</p>
-</div>
-<div class="paragraph">
-<p>Endringsloggene for det enkelte datasett har som ambisjonsnivå å beskrive de viktigste endringene når det gjelder datainnhold (objekttyper) siden forrige versjon. Endringsloggen vil ikke inneholde alle detaljerte endringer på egenskapsnivå eller endringer når det gjelder utvekslingsformat,  datamodellering eller lignende.</p>
+<p>Endringsloggen inneholder en detaljert beskrivelse av endringer fra forrige versjon av produktspesifikasjonen.
+For endringer lenger tilbake i historikken henvises det til endringsloggen for de tidligere versjonene.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_endringer_fra_fkb_lufthavn_5_0_2_til_fkb_lufthavn_5_1">1.3.2. Endringer fra FKB-Lufthavn 5.0.2 til FKB-Lufthavn 5.1</h4>
 <div class="paragraph">
-<p>Hovedformålet med endringene innført i versjon 5.1 er å få til bedre samsvar med Avinors mer detaljerte produktspesifikasjon for Lufthavn.
-I tillegg til endringene utført i datamodellen for FKB-Lufthavn innføres "lufthavngjerde" som egen gjerdetype i FKB-BygnAnlegg og "Lufthavn" som egen objekttype i FKB-Arealbruk.
-Det gjøres i tillegg en rekke justeringer/presiseringer i fotogrammetrisk registreringsinstruks.</p>
+<p>Hovedformålet med endringene innført i versjon 5.1 er å få til bedre samsvar med Avinors mer detaljerte produktspesifikasjon for Lufthavn. Endringene omfatter:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -737,55 +724,10 @@ Det gjøres i tillegg en rekke justeringer/presiseringer i fotogrammetrisk regis
 <p>Fjernet objekttype Taksebanegrense og innført objekttype Taksebane med flategeometri i stedet</p>
 </li>
 <li>
-<p>Innført ny objekttype for Oppstillingsplass</p>
+<p>Innført ny objekttype for Oppstillingsplattform</p>
 </li>
 <li>
-<p>Oppdatert kap.6 som referanserammer med henvisning til FKB Generell del.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_endringer_fra_fkb_lufthavn_5_0_1_til_fkb_lufthavn_5_0_2">1.3.3. Endringer fra FKB-Lufthavn 5.0.1 til FKB-Lufthavn 5.0.2</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Lagt til manglende tagg defaultCodeSpace på egenskapen lufthavnlystype på featuretype Lufthavnlys</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_endringer_fra_fkb_lufthavn_5_0_til_fkb_lufthavn_5_0_1">1.3.4. Endringer fra FKB-Lufthavn 5.0 til FKB-Lufthavn 5.0.1</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Rettet type for egenskapen posisjon på objekttype Rullebane fra <em>Punkt</em> til <em>GM_Point</em></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_endringer_fra_fkb_lufthavn_4_6_til_fkb_lufthavn_5_0">1.3.5. Endringer fra FKB-Lufthavn 4.6 til FKB-Lufthavn 5.0</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Oppdatert generelle konsepter fra FKB 5.0 generell del.</p>
-</li>
-<li>
-<p>Objekttype <em>Plattformgrense</em> er fjernet fra spesifikasjon.</p>
-</li>
-<li>
-<p>Innført ny objekttype <em>Helikopterlandingsplass</em> og modelleres med heleid flategeometri. Stedfestingskvalitet kodes på flateobjektet og gjelder da avgrensningen til flateobjektet.</p>
-</li>
-<li>
-<p>Innført flate for objekttype <em>Rullebane</em> og modelleres med heleid flategeometri. Stedfestingskvalitet kodes på flateobjektet og gjelder da avgrensningen til flateobjektet.</p>
-</li>
-<li>
-<p>Innført egenskapen <em>eksternPeker</em> for å gjøre det mulig å legge inn referanser (i form av URI-er) til de tilsvarende objektene forvaltet i andre systemer.</p>
-</li>
-<li>
-<p>Kodeliste <em>Lufthavnlystype</em> er flyttet ut av produktspesifikasjon og forvaltes eksternt i <a href="https://register.geonorge.no/sosi-kodelister/fkb/lufthavn/5.0">Geonorge</a>.</p>
+<p>Oppdatert kap.6 om referanserammer med henvisning til FKB Generell del.</p>
 </li>
 </ul>
 </div>
@@ -795,10 +737,10 @@ Det gjøres i tillegg en rekke justeringer/presiseringer i fotogrammetrisk regis
 <div class="sect2">
 <h3 id="_normative_referanser">1.4. Normative referanser</h3>
 <div id="FKB" class="paragraph">
-<p><strong>[FKB]</strong> : <a href="https://sosi.geonorge.no/Standarder/FKB_generell_del">SOSI abstrakte spesifikasjoner – FKB generell del, versjon 5.0 2022-01-01</a></p>
+<p><strong>[FKB]</strong> : <a href="https://sosi.geonorge.no/Standarder/FKB_generell_del">SOSI abstrakte spesifikasjoner – FKB generell del, versjon 5.1 2027-01-01</a></p>
 </div>
 <div id="G" class="paragraph">
-<p><strong>[G]</strong> : <a href="https://www.kartverket.no/globalassets/geodataarbeid/standardisering/standarder/standarder-geografisk-informasjon/geodatakvalitet-1.0-standarder-geografisk-informasjon.pdf">Geodatakvalitet, versjon 1.0 2015</a></p>
+<p><strong>[G]</strong> : <a href="https://register.geonorge.no/standarder/sosi/standarder-geografisk-informasjon/geodatakvalitet">Geodatakvalitet, versjon 1.0 2015</a></p>
 </div>
 <div id="GEO-VEIL" class="paragraph">
 <p><strong>[GEO-VEIL]</strong> : <a href="https://www.kartverket.no/geodataarbeid/geovekst/veiledningsmateriell-geovekst">Geovekst veiledingsdokumentasjon</a></p>
@@ -807,22 +749,22 @@ Det gjøres i tillegg en rekke justeringer/presiseringer i fotogrammetrisk regis
 <p><strong>[ISO-METADATA]</strong> : 19115-1:2015 Geographic information - Metadata - Part 1: Fundamentals og 19115-2:2015 Geographic information - Metadata - Part 2: Extensions for acquisition and processing</p>
 </div>
 <div id="PABG" class="paragraph">
-<p><strong>[PABG]</strong> : <a href="https://www.kartverket.no/globalassets/geodataarbeid/standardisering/standarder/standarder-geografisk-informasjon/produksjon-av-basis-geodata-1.0-standarder-geografisk-informasjon.pdf">Produksjon av basis geodata, versjon 1.0 2015</a></p>
+<p><strong>[PABG]</strong> : <a href="https://register.geonorge.no/standarder/sosi/standarder-geografisk-informasjon/produksjon-av-basis-geodata">Produksjon av basis geodata, versjon 2.0 2023</a></p>
 </div>
 <div id="PBL-KART" class="paragraph">
-<p><strong>[PBL-KART]</strong> : <a href="https://www.regjeringen.no/no/dokumenter/veiledning-til-forskrift-om-kart-stedfestet-informasjon-arealformal-og-digitalt-planregister/">Veiledning til forskrift om kart, stedfestet informasjon, arealformål og digitalt planregister</a></p>
+<p><strong>[PBL-KART]</strong> : <a href="https://www.regjeringen.no/no/dokumenter/veileder-til-forskrift-om-kart-stedfestet-informasjon-arealformal-og-digitalt-planregister/id3114032/">Veiledning til forskrift om kart, stedfestet informasjon, arealformål og digitalt planregister</a></p>
 </div>
 <div id="SOSI-UML" class="paragraph">
-<p><strong>[SOSI-UML]</strong> : <a href="https://www.kartverket.no/globalassets/geodataarbeid/standardisering/standarder/sosi-del-1-generell-del/regler-for-uml-modellering-5.1-sosi-generell-del.pdf">SOSI Regler for UML-modellering, versjon 5.1 2020</a></p>
+<p><strong>[SOSI-UML]</strong> : <a href="https://register.geonorge.no/standarder/sosi/del-1-generell-del/regler-for-uml-modellering">SOSI Regler for UML-modellering, versjon 5.1 2020</a></p>
 </div>
 <div id="SOSI-KRAV" class="paragraph">
-<p><strong>[SOSI-KRAV]</strong> : <a href="https://www.kartverket.no/globalassets/geodataarbeid/standardisering/standarder/sosi-del-1-generell-del/sosi-produktspesifikasjoner-krav-og-godkjenning-5.0-sosi-generell-del.pdf">SOSI produktspesifikasjoner – Krav og godkjenning, versjon 5.0 2014</a></p>
+<p><strong>[SOSI-KRAV]</strong> : <a href="https://register.geonorge.no/standarder/sosi/del-1-generell-del/sosi-produktspesifikasjoner-krav-og-godkjenning">SOSI produktspesifikasjoner – Krav og godkjenning, versjon 5.0 2014</a></p>
 </div>
 <div id="SOSI-FORMAT" class="paragraph">
-<p><strong>[SOSI-FORMAT]</strong> : <a href="https://www.kartverket.no/globalassets/geodataarbeid/standardisering/standarder/sosi-del-1-generell-del/realisering-i-sosi-format-5.0-sosi-generell-del.pdf">SOSI Realisering i SOSI-format, versjon 5.0 2018</a></p>
+<p><strong>[SOSI-FORMAT]</strong> : <a href="https://register.geonorge.no/standarder/sosi/del-1-generell-del/realisering-i-sosi-format">SOSI Realisering i SOSI-format, versjon 5.0 2018</a></p>
 </div>
 <div id="SOSI-GML" class="paragraph">
-<p><strong>[SOSI-GML]</strong> : <a href="https://www.kartverket.no/globalassets/geodataarbeid/standardisering/standarder/sosi-del-1-generell-del/realisering-i-gml-format-5.0-sosi-generell-del.pdf">SOSI Realisering i GML-format, versjon 5.0 2018</a></p>
+<p><strong>[SOSI-GML]</strong> : <a href="https://register.geonorge.no/standarder/sosi/del-1-generell-del/realisering-i-gml-format">SOSI Realisering i GML-format, versjon 5.0 2018</a></p>
 </div>
 </div>
 </div>
@@ -1298,7 +1240,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_modellstatus</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">utkast</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">foreslått</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOSI_spesifikasjonstype</p></td>
@@ -1333,9 +1275,16 @@ Ikke angitt</p>
 <hr>
 <div class="imageblock">
 <div class="content">
-<a class="image" href="Diagrammer\Hoveddiagram FKB-Lufthavn-5.0.png"><img src="Diagrammer/Hoveddiagram%20FKB-Lufthavn-5.0.png" alt="Diagram med navn  Hoveddiagram FKB-Lufthavn-5.0  som viser UML-klasser beskrevet i teksten nedenfor."></a>
+<a class="image" href="Diagrammer\Hoveddiagram FKB-Lufthavn.png"><img src="Diagrammer/Hoveddiagram%20FKB-Lufthavn.png" alt="Diagram med navn  Hoveddiagram FKB-Lufthavn  som viser UML-klasser beskrevet i teksten nedenfor."></a>
 </div>
-<div class="title">Figur 1. Hoveddiagram FKB-Lufthavn-5.0</div>
+<div class="title">Figur 1. Hoveddiagram FKB-Lufthavn</div>
+</div>
+<hr>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="Diagrammer\Oversiktsdiagram.png"><img src="Diagrammer/Oversiktsdiagram.png" alt="Diagram med navn  Oversiktsdiagram  som viser UML-klasser beskrevet i teksten nedenfor."></a>
+</div>
+<div class="title">Figur 2. Oversiktsdiagram</div>
 </div>
 <hr>
 <div class="sect3">
@@ -1348,7 +1297,7 @@ Ikke angitt</p>
 <div class="content">
 <a class="image" href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_rullebane.png"><img src="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_rullebane.png" alt="Bilde av et eksempel på objekttypen Rullebane"></a>
 </div>
-<div class="title">Figur 2. Illustrasjon av objekttype Rullebane</div>
+<div class="title">Figur 3. Illustrasjon av objekttype Rullebane</div>
 </div>
 <h5 id="_egenskaper" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1371,7 +1320,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/GM_Surface">GM_Surface</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 </tr>
 </tbody>
 </table>
@@ -1395,7 +1344,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/URI">URI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
 </table>
@@ -1408,7 +1357,7 @@ Ikke angitt</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appkvalitetpåkrevd">«FeatureType» KvalitetPåkrevd</a><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appfellesegenskaper">«FeatureType» Fellesegenskaper</a><br></p></td>
 </tr>
 </tbody>
 </table>
@@ -1424,7 +1373,7 @@ Ikke angitt</p>
 <div class="content">
 <a class="image" href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_oppstillingsplattform.png"><img src="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_oppstillingsplattform.png" alt="Bilde av et eksempel på objekttypen Oppstillingsplattform"></a>
 </div>
-<div class="title">Figur 3. Illustrasjon av objekttype Oppstillingsplattform</div>
+<div class="title">Figur 4. Illustrasjon av objekttype Oppstillingsplattform</div>
 </div>
 <h5 id="_egenskaper_2" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1447,7 +1396,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/GM_Surface">GM_Surface</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 </tr>
 </tbody>
 </table>
@@ -1471,7 +1420,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/URI">URI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
 </table>
@@ -1484,7 +1433,7 @@ Ikke angitt</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appkvalitetpåkrevd">«FeatureType» KvalitetPåkrevd</a><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appfellesegenskaper">«FeatureType» Fellesegenskaper</a><br></p></td>
 </tr>
 </tbody>
 </table>
@@ -1500,7 +1449,7 @@ Ikke angitt</p>
 <div class="content">
 <a class="image" href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_taksebane.png"><img src="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_taksebane.png" alt="Bilde av et eksempel på objekttypen Taksebane"></a>
 </div>
-<div class="title">Figur 4. Illustrasjon av objekttype Taksebane</div>
+<div class="title">Figur 5. Illustrasjon av objekttype Taksebane</div>
 </div>
 <h5 id="_egenskaper_3" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1523,7 +1472,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/GM_Surface">GM_Surface</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 </tr>
 </tbody>
 </table>
@@ -1547,7 +1496,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/URI">URI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
 </table>
@@ -1560,7 +1509,7 @@ Ikke angitt</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appkvalitetpåkrevd">«FeatureType» KvalitetPåkrevd</a><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appfellesegenskaper">«FeatureType» Fellesegenskaper</a><br></p></td>
 </tr>
 </tbody>
 </table>
@@ -1576,7 +1525,7 @@ Ikke angitt</p>
 <div class="content">
 <a class="image" href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_helikopterlandingsplass.png"><img src="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_helikopterlandingsplass.png" alt="Bilde av et eksempel på objekttypen Helikopterlandingsplass"></a>
 </div>
-<div class="title">Figur 5. Illustrasjon av objekttype Helikopterlandingsplass</div>
+<div class="title">Figur 6. Illustrasjon av objekttype Helikopterlandingsplass</div>
 </div>
 <h5 id="_egenskaper_4" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1599,7 +1548,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/GM_Surface">GM_Surface</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Surface</p></td>
 </tr>
 </tbody>
 </table>
@@ -1623,7 +1572,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/URI">URI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
 </table>
@@ -1636,7 +1585,7 @@ Ikke angitt</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appkvalitetpåkrevd">«FeatureType» KvalitetPåkrevd</a><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appfellesegenskaper">«FeatureType» Fellesegenskaper</a><br></p></td>
 </tr>
 </tbody>
 </table>
@@ -1652,7 +1601,7 @@ Ikke angitt</p>
 <div class="content">
 <a class="image" href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_lufthavnlys.png"><img src="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/figurer/objtype_lufthavnlys.png" alt="Bilde av et eksempel på objekttypen Lufthavnlys"></a>
 </div>
-<div class="title">Figur 6. Illustrasjon av objekttype Lufthavnlys</div>
+<div class="title">Figur 7. Illustrasjon av objekttype Lufthavnlys</div>
 </div>
 <h5 id="_egenskaper_5" class="discrete">Egenskaper</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -1675,7 +1624,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/GM_Point">GM_Point</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GM_Point</p></td>
 </tr>
 </tbody>
 </table>
@@ -1699,7 +1648,7 @@ Ikke angitt</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/URI">URI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
 </table>
@@ -1740,7 +1689,7 @@ Ikke angitt</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appkvalitetpåkrevd">«FeatureType» KvalitetPåkrevd</a><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appfellesegenskaper">«FeatureType» Fellesegenskaper</a><br></p></td>
 </tr>
 </tbody>
 </table>
@@ -1784,21 +1733,21 @@ Kopieres direkte inn i de enkelte FKB-datasettene</p>
 <div class="content">
 <a class="image" href="Diagrammer\Oversiktsdiagram Fellesegenskaper.png"><img src="Diagrammer/Oversiktsdiagram%20Fellesegenskaper.png" alt="Diagram med navn  Oversiktsdiagram Fellesegenskaper  som viser UML-klasser beskrevet i teksten nedenfor."></a>
 </div>
-<div class="title">Figur 7. Oversiktsdiagram Fellesegenskaper</div>
+<div class="title">Figur 8. Oversiktsdiagram Fellesegenskaper</div>
 </div>
 <hr>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="Diagrammer\Realisering fra SOSI generell del.png"><img src="Diagrammer/Realisering%20fra%20SOSI%20generell%20del.png" alt="Diagram med navn  Realisering fra SOSI generell del  som viser UML-klasser beskrevet i teksten nedenfor."></a>
 </div>
-<div class="title">Figur 8. Realisering fra SOSI generell del</div>
+<div class="title">Figur 9. Realisering fra SOSI generell del</div>
 </div>
 <hr>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="Diagrammer\Hoveddiagram Posisjonskvalitet.png"><img src="Diagrammer/Hoveddiagram%20Posisjonskvalitet.png" alt="Diagram med navn  Hoveddiagram Posisjonskvalitet  som viser UML-klasser beskrevet i teksten nedenfor."></a>
 </div>
-<div class="title">Figur 9. Hoveddiagram Posisjonskvalitet</div>
+<div class="title">Figur 10. Hoveddiagram Posisjonskvalitet</div>
 </div>
 <hr>
 <div class="sect4">
@@ -1861,7 +1810,7 @@ Unik identifikasjon av et objekt, ivaretas av den ansvarlige produsent/forvalter
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/DateTime">DateTime</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DateTime</p></td>
 </tr>
 </tbody>
 </table>
@@ -1887,7 +1836,7 @@ Egenskapen settes av forvaltningssystemet. Sluttdato skal kun sendes med ut fra 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/DateTime">DateTime</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DateTime</p></td>
 </tr>
 </tbody>
 </table>
@@ -1911,7 +1860,7 @@ Egenskapen settes av forvaltningssystemet. Sluttdato skal kun sendes med ut fra 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/Date">Date</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
 </tr>
 </tbody>
 </table>
@@ -1937,7 +1886,7 @@ Brukes for eksempel i de sammenhenger hvor det er foretatt fotogrammetrisk ajour
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/Date">Date</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
 </tr>
 </tbody>
 </table>
@@ -1991,35 +1940,10 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/CharacterString">CharacterString</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
 </tr>
 </tbody>
 </table>
-<h6 id="_arv_og_realiseringer_6" class="discrete">Arv og realiseringer</h6>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Subtyper:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#appkvalitetpåkrevd">«FeatureType» KvalitetPåkrevd</a><br></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Realisert fra:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle typer 5.1::SOSI_Fellesegenskaper og SOSI_Objekt::<span class="underline">«FeatureType» SOSI_Objekt</span><br></p></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</div>
-<div class="sect4">
-<h5 id="appkvalitetpåkrevd">5.1.7.2. <em>«FeatureType» KvalitetPåkrevd (abstrakt)</em></h5>
-<div class="paragraph">
-<p><strong>Definisjon:</strong> abstrakt objekttype med påkrevet kvalitetsangivelse</p>
-</div>
-<h6 id="_egenskaper_7" class="discrete">Egenskaper</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2045,7 +1969,7 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 </tr>
 </tbody>
 </table>
-<h6 id="_arv_og_realiseringer_7" class="discrete">Arv og realiseringer</h6>
+<h6 id="_arv_og_realiseringer_6" class="discrete">Arv og realiseringer</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2053,16 +1977,12 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Supertype:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generelle elementer::<a href="#appfellesegenskaper">«FeatureType» Fellesegenskaper</a><br></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subtyper:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#apprullebane">«FeatureType» Rullebane</a><br>
-<a href="#apptaksebane">«FeatureType» Taksebane</a><br>
-<a href="#applufthavnlys">«FeatureType» Lufthavnlys</a><br>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#apptaksebane">«FeatureType» Taksebane</a><br>
+<a href="#appoppstillingsplattform">«FeatureType» Oppstillingsplattform</a><br>
 <a href="#apphelikopterlandingsplass">«FeatureType» Helikopterlandingsplass</a><br>
-<a href="#appoppstillingsplattform">«FeatureType» Oppstillingsplattform</a><br></p></td>
+<a href="#applufthavnlys">«FeatureType» Lufthavnlys</a><br>
+<a href="#apprullebane">«FeatureType» Rullebane</a><br></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Realisert fra:</p></td>
@@ -2073,7 +1993,7 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 <hr>
 </div>
 <div class="sect4">
-<h5 id="appidentifikasjon">5.1.7.3. «dataType» Identifikasjon</h5>
+<h5 id="appidentifikasjon">5.1.7.2. «dataType» Identifikasjon</h5>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> Unik identifikasjon av et objekt i et datasett, forvaltet av den ansvarlige produsent/forvalter, og kan benyttes av eksterne applikasjoner som stabil referanse til objektet.</p>
 </div>
@@ -2083,7 +2003,7 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 <div class="paragraph">
 <p>Merknad 2: Denne unike identifikatoren vil ikke endres i løpet av objektets levetid, og ikke gjenbrukes i andre objekt.</p>
 </div>
-<h6 id="_egenskaper_8" class="discrete">Egenskaper</h6>
+<h6 id="_egenskaper_7" class="discrete">Egenskaper</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2105,7 +2025,7 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/CharacterString">CharacterString</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
 </tr>
 </tbody>
 </table>
@@ -2131,7 +2051,7 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/CharacterString">CharacterString</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
 </tr>
 </tbody>
 </table>
@@ -2155,11 +2075,11 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/CharacterString">CharacterString</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CharacterString</p></td>
 </tr>
 </tbody>
 </table>
-<h6 id="_arv_og_realiseringer_8" class="discrete">Arv og realiseringer</h6>
+<h6 id="_arv_og_realiseringer_7" class="discrete">Arv og realiseringer</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2175,7 +2095,7 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 <hr>
 </div>
 <div class="sect4">
-<h5 id="appposisjonskvalitet">5.1.7.4. «dataType» Posisjonskvalitet</h5>
+<h5 id="appposisjonskvalitet">5.1.7.3. «dataType» Posisjonskvalitet</h5>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> beskrivelse av kvaliteten på stedfestingen.</p>
 </div>
@@ -2183,7 +2103,7 @@ Mulighet til å legge inn utfyllende informasjon om objektet. Egenskapen bør ba
 <p>Merknad:
 Posisjonskvalitet er ikke konform med  kvalitetsmodellen i ISO slik den er defineret i ISO19157:2013, men er en videreføring av tidligere brukte kvalitetsegenskaper i SOSI. FKB 5.0 innfører en egen variant av datatypen Posisjonskvalitet der kodeliste målemetode er byttet ut med den mer generelle kodelista Datafangstmetode.</p>
 </div>
-<h6 id="_egenskaper_9" class="discrete">Egenskaper</h6>
+<h6 id="_egenskaper_8" class="discrete">Egenskaper</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2237,7 +2157,7 @@ Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/Integer">Integer</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
 </tr>
 </tbody>
 </table>
@@ -2322,7 +2242,7 @@ Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://skjema.geonorge.no/SOSI/basistype/Integer">Integer</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
 </tr>
 </tbody>
 </table>
@@ -2351,7 +2271,7 @@ Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for 
 </tr>
 </tbody>
 </table>
-<h6 id="_arv_og_realiseringer_9" class="discrete">Arv og realiseringer</h6>
+<h6 id="_arv_og_realiseringer_8" class="discrete">Arv og realiseringer</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2367,7 +2287,7 @@ Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for 
 <hr>
 </div>
 <div class="sect4">
-<h5 id="appsynbarhet">5.1.7.5. «CodeList» Synbarhet</h5>
+<h5 id="appsynbarhet">5.1.7.4. «CodeList» Synbarhet</h5>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> synbarhet beskriver hvor godt objektene framgår i datagrunnlaget for posisjonering (f.eks. flybildene).</p>
 </div>
@@ -2388,7 +2308,7 @@ Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for 
 </tr>
 </tbody>
 </table>
-<h6 id="_arv_og_realiseringer_10" class="discrete">Arv og realiseringer</h6>
+<h6 id="_arv_og_realiseringer_9" class="discrete">Arv og realiseringer</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2404,7 +2324,7 @@ Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for 
 <hr>
 </div>
 <div class="sect4">
-<h5 id="appdatafangstmetode">5.1.7.6. «CodeList» Datafangstmetode</h5>
+<h5 id="appdatafangstmetode">5.1.7.5. «CodeList» Datafangstmetode</h5>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> metode for datafangst.</p>
 </div>
@@ -2431,7 +2351,7 @@ Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for 
 <hr>
 </div>
 <div class="sect4">
-<h5 id="appregistreringsversjon">5.1.7.7. «CodeList» Registreringsversjon</h5>
+<h5 id="appregistreringsversjon">5.1.7.6. «CodeList» Registreringsversjon</h5>
 <div class="paragraph">
 <p><strong>Definisjon:</strong> FKB-verjson som ligger til grunn for registrering. Mest relevant for data som er fotogrammetrisk registrert.</p>
 </div>
@@ -2452,7 +2372,7 @@ Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for 
 </tr>
 </tbody>
 </table>
-<h6 id="_arv_og_realiseringer_11" class="discrete">Arv og realiseringer</h6>
+<h6 id="_arv_og_realiseringer_10" class="discrete">Arv og realiseringer</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2901,13 +2821,10 @@ Data ihht. denne standarden skal håndteres i tråd med disse beskrivelsene.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/FKBLufthavn.xsd">https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/FKBLufthavn.xsd</a></p>
+<p><a href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/FKBLufthavn.xsd">https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/FKBLufthavn.xsd</a> (GML applikasjonsskjema)</p>
 </li>
 <li>
-<p><a href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/FKBLufthavn.sch">Schematron-regler til validering av tilleggskrav til datainnhold og -struktur utover det som er definert i GML-skjemafil</a> (sch-fil)</p>
-</li>
-<li>
-<p><a href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/eksempel/">Katalog med eksempelfiler</a></p>
+<p><a href="https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/FKBLufthavn.sch">https://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Lufthavn/5.1/FKBLufthavn.sch</a> (Schematron-regler til validering av tilleggskrav til datainnhold og -struktur utover det som er definert i GML-skjemafil)</p>
 </li>
 </ul>
 </div>
@@ -2917,7 +2834,7 @@ Data ihht. denne standarden skal håndteres i tråd med disse beskrivelsene.</p>
 <h2 id="_vedlegg_b_sosi_format_realisering">Vedlegg B - SOSI-format-realisering</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>SOSI-realiseringen følger kravene i "Realisering i SOSI-foramt 5.0" <a href="#SOSI-FORMAT">[SOSI-FORMAT]</a>. Under en utlisting av SOSI-formatrealiseringen:</p>
+<p>SOSI-realiseringen følger kravene i "Realisering i SOSI-foramt 5.0" <a href="#SOSI-FORMAT">[SOSI-FORMAT]</a>. Se også FKB Generell del <a href="#FKB">[FKB]</a> for beskrivelse av håndtering av flater med heleid geometri. Under en utlisting av SOSI-formatrealiseringen:</p>
 </div>
 <h5 id="_objekttype_rullebane" class="discrete">Objekttype: Rullebane</h5>
 <h6 id="_geometrityper" class="discrete">Geometrityper</h6>
@@ -3705,7 +3622,7 @@ av denne lisensen og ikke kan viderebrukes</p>
 <div id="footer">
 <div id="footer-text">
 Versjon 5.1<br>
-Last updated 2026-10-12 12:27:22 +0200
+Last updated 2026-10-21 14:50:42 +0200
 </div>
 </div>
 </body>
