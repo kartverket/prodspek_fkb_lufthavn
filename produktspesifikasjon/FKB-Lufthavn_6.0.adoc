@@ -1,10 +1,10 @@
 :datasett: FKB-Lufthavn
-:versjon: 5.1
-:publisert: 2026-10-22
+:versjon: 6.0
+:publisert: 2026-10-23
 :metadata-url: https://kartkatalog.geonorge.no/metadata/fkb-lufthavn/23dfcc33-fb04-4898-aa88-68b49c4bfea7
 :versjon-forrige: 5.0.2
-:skjemaversjon: 5.1
-:versjon-erstattet-av: 5.1
+:skjemaversjon: 6.0
+:versjon-erstattet-av: 6.0
 :underversjon: 2027-01-01
 :underversjon-forrige: 2022-01-01
 :dokumentstatus: 2
@@ -40,7 +40,7 @@ Tidligere versjoner:
 * FKB-Lufthavn versjon 5.0 - 2022-01-01
 * FKB-Lufthavn versjon 5.0.1 - 2022-01-01
 * FKB-Lufthavn versjon 5.0.2 - 2022-01-01
-* FKB-Lufthavn versjon 5.1 - 2027-01-01
+* FKB-Lufthavn versjon 6.0 - 2027-01-01
 
 === Endringslogg
 
@@ -49,9 +49,9 @@ Tidligere versjoner:
 Endringsloggen inneholder en detaljert beskrivelse av endringer fra forrige versjon av produktspesifikasjonen. 
 For endringer lenger tilbake i historikken henvises det til endringsloggen for de tidligere versjonene.
 
-==== Endringer fra FKB-Lufthavn 5.0.2 til FKB-Lufthavn 5.1
+==== Endringer fra FKB-Lufthavn 5.0.2 til FKB-Lufthavn 6.0
 
-Hovedformålet med endringene innført i versjon 5.1 er å få til bedre samsvar med Avinors mer detaljerte produktspesifikasjon for Lufthavn. Endringene omfatter:
+Hovedformålet med endringene innført i versjon 6.0 er å få til bedre samsvar med Avinors mer detaljerte produktspesifikasjon for Lufthavn. Endringene omfatter:
 
 * Justert definisjon og illustrerende bilde for Rullebane
 * Fjernet objekttype Taksebanegrense og innført objekttype Taksebane med flategeometri i stedet
