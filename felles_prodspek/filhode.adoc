@@ -20,7 +20,6 @@ ifdef::backend-pdf[:toc: macro]
 :reginstrbase-url: https://sosi.geonorge.no/registreringsinstrukser/
 :fkbGenerellDel-url: https://sosi.geonorge.no/Standarder/FKB_generell_del
 :fkbdatasett: {datasett} {versjon}
-:skjema-url: {skjemabase-url}{datasett}/{skjemaversjon}
 :prodspek-url: {prodspekbase-url}{datasett}
 :uml-url: {umlbase-url}{datasett}/{versjon}
 :reginstr-url: {reginstrbase-url}{datasett}/{skjemaversjon}
@@ -33,6 +32,8 @@ Geovekst
 ****
 
 ifeval::[{dokumentstatus} == 2]
+
+:skjemabase-url: https://skjema.test.geonorge.no/SOSI/produktspesifikasjon/
 
 WARNING: *Høringsversjon!* Siste gyldige versjon finnes på {prodspek-url}/{versjon-forrige} 
 
@@ -62,5 +63,7 @@ Vedtatt som standard av Standardiseringskomiteen for Geomatikk
 endif::[]
 
 ****
+
+:skjema-url: {skjemabase-url}{datasett}/{skjemaversjon}
 
 toc::[]
